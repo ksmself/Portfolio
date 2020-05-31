@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  body {
+    font-family: "Noto Sans KR", sans-serif;
+    letter-spacing: -0.02em;
+    background-color: #000;
+  }
+  
+  h1 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #1f2d3d;
+    line-height: 1.4545454545;
+  }
+  
+  span {
+    font-size: 14px;
+    font-weight: 400;
+    color: #7d858f;
+    line-height: 1.5;
+  }
+  
+  strong {
+    font-size: 22px;
+    color: #2860e1;
+    line-height: 1.0909090909;
+  }
+  
+  strong span {
+    font-size: 16px;
+    font-weight: 400;
+    color: #525d69;
+    line-height: 1.5;
+  }
+  
+  button {
+    display: block;
+    width: 28px;
+    height: 28px;
+    border: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: transparent;
+  }
+  
+  #prev {
+    background-image: url(./assets-3/icon-backward.svg);
+  }
+  
+  #next {
+    background-image: url(./assets-3/icon-forward.svg);
+  }
+  
+  /* ▼ WHERE YOUR CODE BEGINS */
+  .card{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 354px;
+  }
+  .card-carousel img{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .card-carousel{
+    position: relative;
+  }
+  #prev, 
+  #next{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  #prev{
+    left: 0;
+  }
+  #next{
+    right: 0;
+  }
+  .card-content h1{
+    margin-bottom: 2px;
+  }
+  .card-content strong{
+    display: block;
+    /* 일반적으로, margin은 한 방향으로 주는 것이 좋음 */
+    margin-top: 8px;
+    text-align: right;
+  }
+  .card-content{
+    padding: 12px 16px;
+    background-color: #FFFFFF;
+  }

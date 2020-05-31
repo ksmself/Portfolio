@@ -1,0 +1,143 @@
+.like-button {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+  /* ▼ WHERE YOUR CODE BEGINS */
+  *{
+      box-sizing: border-box;
+      margin: 0;
+  }
+
+  body{
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400; 
+      background-color: #000;
+  }
+
+  .card{ 
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 924px;
+      height: 248px;
+      padding: 24px;
+      background-color: #fff;
+  }
+
+  .card::after{
+      content: "";
+      display: block;
+      clear: left;
+  }
+
+  .card-image,
+  .card-content{
+      float: left;
+  }
+
+  .card-image{
+      position: relative;
+      width: 300px;
+      height: 200px;
+      margin-right: 24px;
+      border-radius: 6px;
+      background-image: url(./assets-2/img-house.jpg);
+      background-size: cover;
+  }
+
+  .like-button{
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      width: 36px;
+      height: 36px;
+      border-radius: 100px;
+      background-image: url(./assets-2/icon-favorite.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: #fff;
+  }
+
+  .card-header{
+      position: relative;
+      margin-bottom: 9px;
+  }
+
+  .card-header::after{
+      content: "";
+      display: block;
+      clear: left;
+  }
+
+  .property-type,
+  .property-rate{
+      float: left;
+  }
+
+  .plus-badge{
+      width: 48px;
+      height: 22px;
+      padding: 1px 8px;
+      margin-right: 8px;
+      border-radius: 4px;
+      font-size: 14px;
+      line-height: 1.42857142857;
+      font-weight: 500;
+      color: #fff;
+      background-color: #92174D;
+  }
+
+  .property-type > span{
+      font-size: 16px;
+      line-height: 1.25;
+      color: #7D858F;
+  }
+
+  .property-rate{
+      display: flex;
+      justify-content: flex-end;
+      position: absolute;
+      right: 0;
+      width: 93px;
+      font-size: 16px;
+      line-height: 1.25;
+      background-image: url(./assets-2/icon-star.svg);
+      background-position: left;
+      background-repeat: no-repeat;
+  }
+
+  .property-rate > strong{
+      font-weight: 400;
+      color: #151B26;
+  }
+
+  .property-rate > span{
+      color: #7D858F;
+  }
+
+  .card-title{
+      margin-bottom: 16px;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 1.6;
+      color: #151B26;
+  }
+
+  .property-detail{
+      font-size: 14px;
+      line-height: 1.14285714286;
+      color: #7D858F;
+  }
+
+  .property-detail .sr-only{
+      display: none;
+  }
+
+  .property-detail > div{
+      margin-bottom: 8px;
+  }
+
+  .property-detail span::after{
+      content:' • ';
+  }

@@ -1,0 +1,350 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    font-family: 'Oswald', 'Jua', sans-serif;
+    background-color: #000066;
+}
+
+
+
+.home,
+.about,
+.portfolio,
+.contact{
+    width: 100vw;
+    height: 100vh;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0; 
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 158px;
+}
+
+header h1 img{
+    width: 150px;
+    height: 150px;
+    margin-top: 20px;
+    margin-left: 8px;
+    margin-right: 40px;
+    border-radius: 50%; 
+}
+
+nav{
+    width: 1600px;
+}
+
+nav::after{
+    content:'';
+    display: block;
+    clear: left;
+}
+
+nav h1, 
+.about h1,
+.portfolio h1,
+.contact h1{
+    display: absolute;
+    z-index: -1;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+nav li{
+    float: left;
+}
+
+nav li a:hover{
+    color: #00ff00;
+}
+
+nav a{
+    font-size: 48px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.introduction{
+    font-size: 48px;
+    color: #ffffff;
+}
+
+.introduction span{
+    display: flex;
+    justify-content: center;
+    animation-name: flicker;
+    animation-duration: 160ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes flicker{
+    from{
+        opacity: 1;
+        color: #FFFF00;
+    }
+    to{
+        opacity: 0;
+    }
+} 
+
+.introduction h1{
+    color: #33ffff;
+}
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0; 
+    width: 100vw;
+    height: 90px;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.about{
+    padding: 220px 186px 0;
+    color: #FFFFFF;
+}
+
+.profile, .skill{
+    margin-right: 180px;
+    font-size: 28px;
+}
+
+.profile strong, 
+.skill strong,
+.education strong{
+    display: inline-block;
+    margin-bottom: 32px;
+    font-size: 52px;
+    color: #33ffff;
+}
+
+.info{
+    margin-bottom: 90px;
+}
+
+.info img{
+    display: block;
+    width: 200px;
+    height: 240px;
+}
+
+.info ul{
+    list-style-type: none;
+}
+
+.info img, .info ul{
+    float: left; 
+}
+
+.info::after{
+    content: '';
+    display: block;
+    clear: left;
+}
+
+.personal-statement ul{
+    padding-inline-start: 32px;
+}
+
+.profile, 
+.skill,
+.education{
+    float: left;
+}
+
+.about::after{
+    content: '';
+    display: block;
+    clear: left;
+}
+
+.education{
+    font-size: 28px;
+}   
+ 
+.education span{
+    display: block;
+}
+
+
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    color: #FFFFFF;  
+}
+
+.contact ul{
+    list-style-type: none;
+    color: #33ffff;
+}
+
+.contact li:nth-child(2){
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio-1,
+.portfolio-2,
+.portfolio-3{
+    float: left; 
+}
+
+.portfolio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: '';
+    clear: left;
+}
+
+.portfolio-1{
+    width: 500px;
+    margin-right: 90px;
+}
+
+.portfolio h2{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 28px;
+    font-size: 46px;
+    color: #FFFFFF;
+}
+
+.portfolio-1-box{
+    width: 500px;
+    height: 390px;
+    margin-bottom: 9px;
+    background-image: url(./assets/portfolio-1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-color: #FFFFFF;
+}
+
+.portfolio-1-box-hover,
+.portfolio-2-box-hover,
+.portfolio-3-box-hover{
+    width: 500px;
+    height: 390px;
+    opacity: 0; 
+}
+
+.portfolio-1-box-hover:hover,
+.portfolio-2-box-hover:hover,
+.portfolio-3-box-hover:hover{
+    display: flex;
+    align-items: center;
+    opacity: 0.89;
+    font-family: 'Jua', 'sans-serif';
+    font-size: 48px;
+    color: #4DEF40;
+    background-color: #778899;
+    cursor: pointer;
+}
+
+.view{
+    margin-right: 13px;
+    border-style: none;
+    border-radius: 16px;
+    font-family: "Oswald", "sans-serif";
+    font-size: 46px;
+    color: #FFFFFF;
+    background-color: #007fff;
+    cursor: pointer;
+}
+
+.code{
+    border-style: none;
+    border-radius: 16px;
+    font-family: "Oswald", "sans-serif";
+    font-size: 46px;
+    color: #FFFFFF;
+    background-color: #007fff; 
+    cursor: pointer;
+}
+
+.view a,
+.code a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 230px;
+    height: 116px; 
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.view,
+.code{
+    float: left; 
+}
+
+.button-box::after{
+    content: '';
+    display: block;
+    clear: left;
+}
+
+.portfolio-2{
+    width: 500px;
+    margin-right: 90px;
+}
+
+.portfolio-2-box{
+    width: 500px;
+    height: 390px;
+    margin-bottom: 9px;
+    background-image: url(./assets/portfolio-2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-color: #FFFFFF;
+}
+
+.portfolio-3{
+    width: 500px;
+}
+
+.portfolio-3-box{
+    width: 500px;
+    height: 390px;
+    margin-bottom: 9px;
+    background-image: url(./assets/portfolio-3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-color: #FFFFFF;
+}
+
+
